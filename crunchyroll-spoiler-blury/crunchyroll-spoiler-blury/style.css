@@ -1,0 +1,21 @@
+/* Solo actúa si la protección global está activa (atributo en <html>) */
+html[data-ss-on="1"] .cr-ss-box[data-ss-hidden="1"] { overflow: hidden !important; }
+html[data-ss-on="1"] .cr-ss-box[data-ss-hidden="1"] img.cr-ss-thumb {
+  filter: blur(18px) !important;
+  transform: scale(1.15) !important;
+}
+html[data-ss-on="1"] .cr-ss-box[data-ss-hidden="1"]::after {
+  content: "HIDDEN SPOILER";
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  z-index: 5;
+  background: #fff;
+  color: #000;
+  font: 700 12px/1 Arial, sans-serif;
+  padding: 5px 8px;
+  border-radius: 3px;
+  pointer-events: none;
+  filter: none;
+}
+.cr-ss-rel { position: relative !important; }

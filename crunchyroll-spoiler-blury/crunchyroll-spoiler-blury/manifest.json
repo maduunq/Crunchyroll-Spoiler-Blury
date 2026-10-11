@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Crunchyroll Spoiler Blury",
+  "version": "1.0.0",
+  "description": "Blurs episode thumbnails on Crunchyroll to prevent spoilers.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Crunchyroll Spoiler Blury",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.crunchyroll.com/*",
+        "https://crunchyroll.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
